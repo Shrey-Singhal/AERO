@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+.!*
+.vscode/
+
+.cache/
+venv_aws/
+build/
+dist/
+*.egg-info/
+

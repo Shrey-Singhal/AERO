@@ -1,0 +1,22 @@
+# AWS Blackwell installation recipe; use scripts/setup_aws_env.sh for CUDA wheels.
+# Reconstructed from the AWS installer, not an exact historical environment lock.
+torch==2.10.0
+torchvision==0.25.0
+torchaudio==2.10.0
+vllm==0.19.0
+
+# Match vLLM's Transformers requirement and its OpenCV/Numba NumPy constraints.
+transformers>=4.56.0,<5.0.0
+numpy>=2,<2.3
+datasets
+accelerate
+peft
+bitsandbytes
+einops
+scipy
+sentencepiece
+tqdm
+protobuf
+packaging
+huggingface_hub
+hf_transfer

@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=77.0.3", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aero-rlhf"
+version = "0.1.0"
+description = "Research code for Adaptive Ensemble-Disagreement Routing for Oracle Feedback."
+readme = "README.md"
+requires-python = ">=3.10,<3.14"
+dynamic = ["dependencies"]
+license = "Apache-2.0"
+license-files = ["LICENSE", "THIRD_PARTY_NOTICES.md", "licenses/*.txt"]
+
+[project.scripts]
+aero-train = "main:main"
+
+[tool.setuptools]
+py-modules = ["main"]
+include-package-data = false
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["configs", "configs.*", "scripts", "scripts.*"]
+namespaces = false
